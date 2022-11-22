@@ -59,8 +59,8 @@ data &outdata;
 set &data;
 *Create flags for PA variables;
 if &METs=< 1.5 then sedentary=1; else sedentary=0;
-if &METs>1.5 and met_min<3 then lpa=1; else lpa=0;
-if &METs>=3 and met_min<6 then mpa=1; else mpa=0;
+if &METs>1.5 and &METs<3 then lpa=1; else lpa=0;
+if &METs>=3 and &METs<6 then mpa=1; else mpa=0;
 if &METs>=6 then vpa=1; else vpa=0;
 if &METs>=3 then mvpa=1; else mvpa=0;
 
