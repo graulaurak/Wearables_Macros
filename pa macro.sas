@@ -79,7 +79,7 @@ select &subject, &date, sum(min) as Total_mins,
 						sum(mpa) as mpa,
 						sum(vpa) as vpa,
 						sum(mvpa) as mvpa
-from &data
+from &outdata
 group by &subject, &date;
 quit;
 
